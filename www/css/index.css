@@ -1,0 +1,134 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    font-family: 'ubunturegular';
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+    font-weight: 400; 
+
+}
+
+/* Portrait layout (default) */
+.app {
+    position:absolute;             /* position in the center of the screen */
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+       
+    }
+}
+
+
+#map {  
+    width: 800px;
+    height: 600px;
+}
+
+.leaflet-shadow-pane {
+    display: none;
+}
+
+footer > div {
+    background-color: rgba(255,255,255,.9);
+    position: absolute;
+    bottom: 20px;
+    height: 80px;
+    color: #2a2f40;
+    z-index: 999;
+    border-radius: 6px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .15);
+}
+#info {
+    left: 20px;
+    bottom: -100px;
+}
+#info.shown {
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+  bottom: 20px;
+}
+
+#left {
+
+    float: left;
+    margin: 10px;
+}
+
+#adress {
+    font-size: 24px;
+
+}
+
+#lastrefresh {
+    font-size: 16px;
+
+}
+
+#right {
+
+    font-size: 50px;
+    font-family: 'ubuntulight';
+    font-weight: 300; 
+    float:right;
+    margin: 10px;
+}
+
+#availableBikes {
+    font-family: 'ubuntubold';
+    font-weight: 700; 
+}
+#right > span:not(:last-child) {
+    margin-right: -10px;
+}
+
+.btn {
+    width: 80px;
+    font-size: 60px;
+    text-align: center;
+}
+
+.btn span {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+
+#refresh {
+    right: 120px;
+}
+
+#geoloc {
+    right: 20px;
+}
+
